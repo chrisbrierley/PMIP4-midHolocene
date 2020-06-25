@@ -5,7 +5,7 @@ plot_dir="../plots"
 VERBOSE=True
 PRINT_OUT_CSV=True
 GMT_for_Y=False
-BARTLEIN_EURASIA=False
+BARTLEIN_EURASIA=True
 
 
 ;Dependent variable
@@ -176,9 +176,9 @@ OUTPUT_TYPE="pdf"
             X_b=extract_latlon_areastat(fnames_both(gcm_i,1),SCATTER_X_VARNAME,(/SCATTER_X_MINLAT,SCATTER_X_MAXLAT/),(/SCATTER_X_MINLON,SCATTER_X_MAXLON/),SCATTER_X_STAT)
             if .not.ALL_EXPTS then
               if SCATTER_X_PCT_CHANGES then
-                dX(gcm_i,1)=100.*(X_a-X_b)/X_b
+                dX(gcm_i,expt_i-1)=100.*(X_a-X_b)/X_b
               else
-                dX(gcm_i,1)=X_a-X_b
+                dX(gcm_i,expt_i-1)=X_a-X_b
               end if
             else
               if SCATTER_X_PCT_CHANGES then
@@ -265,6 +265,9 @@ OUTPUT_TYPE="pdf"
                 else
                  dY(gcm_i,0)=Y_a-Y_b
                 end if
+                if VERBOSE then
+                  print(expt_file+": Y_a="+Y_a+", Y_b="+Y_b+", Change is "+(Y_a-Y_b))
+                end if
               else
                 if SCATTER_Y_PCT_CHANGES then
                   dY(gcm_i,expt_i-1)=100.*(Y_a-Y_b)/Y_b
@@ -272,7 +275,7 @@ OUTPUT_TYPE="pdf"
                   dY(gcm_i,expt_i-1)=Y_a-Y_b
                 end if
                 if VERBOSE then
-                  print(fnames_both(gcm_i,1)+": Y_a="+Y_a+", Y_b="+Y_b)
+                  print(fnames_both(gcm_i,1)+": Y_a="+Y_a+", Y_b="+Y_b+", Change is "+(Y_a-Y_b))
                 end if
               end if
               delete([/Y_a,Y_b/])
@@ -289,7 +292,7 @@ OUTPUT_TYPE="pdf"
               Y_a=stat_ts_var(expt_file,SCATTER_Y_VARNAME,SCATTER_Y_STAT,ts_a)
               Y_b=stat_ts_var(piC_file,SCATTER_Y_VARNAME,SCATTER_Y_STAT,ts_b)
               if VERBOSE then
-                print("Y_a="+Y_a+", Y_b="+Y_b)
+                print("Y_a="+Y_a+", Y_b="+Y_b+", Change is "+(Y_a-Y_b))
               end if
               if .not.ALL_EXPTS then
                 if SCATTER_Y_PCT_CHANGES then
