@@ -10,5 +10,5 @@ else
   cd data
 fi
 
-wget http://www2.geog.ucl.ac.uk/~ucfaccb/PMIPVarData/data/PMIP4_midHolocence_cvdp_data.tar.gz
+curl -O http://www2.geog.ucl.ac.uk/~ucfaccb/PMIPVarData/data/PMIP4_midHolocence_cvdp_data.tar.gz
 tar -xvf PMIP4_midHolocence_cvdp_data.tar.gz
