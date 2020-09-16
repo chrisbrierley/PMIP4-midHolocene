@@ -15,9 +15,11 @@ dependencies:
   - netcdf4
   - h5py
   - h5netcdf
-  - xesmf
   - regionmask
   - cftime
+  # xESMF can fail with esmpy 8. due to parallel IO build issues
+  - xesmf
+  - esmpy=7.1.0
   # jupyter-related
   - nbserverproxy
   - jupyter
