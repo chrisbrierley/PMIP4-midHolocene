@@ -7,7 +7,7 @@ dependencies:
   - numpy
   - scipy
   - xarray
-  - sklearn
+  - scikit-learn
   # geospatial
   - iris
   - cartopy
