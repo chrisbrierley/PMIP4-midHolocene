@@ -1,29 +1,14 @@
-name: pangeo
+name: PMIP4-midHolocene
 channels:
   - conda-forge
 dependencies:
-  - python
-  # core scipy packages
-  - numpy
-  - scipy
   - xarray
-  # geospatial
-  - iris
   - cartopy
-  - geopandas
-  - rasterio
-  - netcdf4
-  - h5py
-  - h5netcdf
   - regionmask
   - cftime
+  - scikit-learn
   # xESMF can fail with esmpy 8. due to parallel IO build issues
   - xesmf
   - esmpy=7.1.0
   # jupyter-related
-  - nbserverproxy
-  - jupyter
   - jupyterlab
-  # xarray-related
-  - xgcm
-  - xrft
