@@ -4,9 +4,11 @@ channels:
 dependencies:
   - xarray
   - cartopy
-  - regionmask
   - cftime
   - scikit-learn
+  # Regionmask isn't compilign with this set up, due to a missing libpoppler.  One suggestion is constrain the poppler package. 
+  - regionmask
+  - poppler<0.62
   # xESMF can fail with esmpy 8. due to parallel IO build issues
   - xesmf
   - esmpy=7.1.0
