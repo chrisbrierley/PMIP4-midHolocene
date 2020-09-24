@@ -5,4 +5,5 @@ The model status is presented in [data/README.md](data/README.md). You should be
 [![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/chrisbrierley/PMIP4-midHolocene/master)
 
 # Publication
-The manuscript has now been accepted for publication at Climate of the Past. It can be read for free at [their website](https://doi.org/10.5194/cp-2019-168). Included at that site are details of the the peer-review process, which should correspond somewhat to the commits made on this repository
+The manuscript has now been accepted for publication at Climate of the Past. It can be read for free at [their website](https://doi.org/10.5194/cp-2019-168). Included at that site are details of the the peer-review process, which should correspond somewhat to the commits made on this repository. The Paper's DOI is [10.5194/cp-2019-168](https://doi.org/10.5194/cp-2019-168), whilst v1 of this repository also has a [![DOI](https://zenodo.org/badge/203397988.svg)](https://zenodo.org/badge/latestdoi/203397988)  
+
