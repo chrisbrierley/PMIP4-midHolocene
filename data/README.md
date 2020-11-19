@@ -1,5 +1,7 @@
 # PMIP4-midHolocene Data
-This directory holds the data for the scripts to run off. 
+This directory holds the data for the scripts to run off. It has a presumed directory structure of the output netcdfs for each experiment being in their own subdirectory and named following the standard CVDP pattern. I.e.
+
+data/exptname/modelname_exptname.cvdp_data.YYYY-YYYY.nc
 
 If this directory is empty then please move into ../scripts and run `./download_cvdp_data_tar.sh`. If you are running this a pangeo binder, then you will need to do that command in a [terminal](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html) first.
 
